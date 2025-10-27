@@ -77,6 +77,7 @@
   display: grid;
   place-items: center;
   text-align: center;
+  transition: all 0.5s ease-in-out;
 }
 
 .container-tittle h2 {
@@ -123,6 +124,7 @@ li {
   list-style: none;
 }
 
+/**CONFIGURACIONES MOBILE**/
 body {
   min-width: 270px;
   font-family: var(--fnt-4);
@@ -177,6 +179,7 @@ header nav ul {
   font-size: 2em;
 }
 
+/**BOTÓN DE MENÚ*/
 header button {
   display: grid;
   place-items: center;
@@ -194,6 +197,7 @@ header button span {
   background-color: var(--clr-4);
 }
 
+/**AJUSTES DE SECCIÓN HOME**/
 main #home {
   position: relative;
   display: grid;
@@ -253,35 +257,10 @@ main #home .art-information .containerSkills {
 }
 
 main #home .art-information .containerSkills h3 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
   transition: all 0.5s ease-in-out;
-  animation: desplace 12s steps(4, end) infinite alternate;
-}
-
-@keyframes desplace {
-  0%,
-  23% {
-    transform: translateY(0);
-  }
-
-  25%,
-  48% {
-    transform: translateY(-100%);
-  }
-
-  50%,
-  73% {
-    transform: translateY(-200%);
-  }
-
-  75%,
-  98% {
-    transform: translateY(-300%);
-  }
-  100% {
-    transform: translateY(-300%);
-  }
+  animation: desplace 8s steps(1, end) infinite alternate;
 }
 
 main #home .containerSocials {
@@ -305,7 +284,87 @@ main #home #svg {
   z-index: 0;
 }
 
+/**AJUSTES DEL FOOTER PARA MOBILE*/
+footer {
+  width: 100%;
+  padding: 0.5em;
+  display: grid;
+  place-items: center;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto 0.5fr;
+  grid-template-areas:
+    "logo info"
+    "social social"
+    "copy copy";
+  row-gap: 1em;
+  background: var(--clr-1);
+  border-top: 1px solid var(--clr-4);
+}
+
+footer section {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .logoFooter {
+  grid-area: logo;
+  display: grid;
+  place-items: center;
+}
+
+footer .informationFooter {
+  grid-area: info;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .informationFooter h2 {
+  font-size: 1em;
+  font-family: var(--fnt-4);
+  font-weight: 200;
+}
+
+footer .informationFooter h3 {
+  font-size: 0.8em;
+  font-family: var(--fnt-2);
+}
+
+footer .informationFooter h4 {
+  font-size: 0.6em;
+  font-family: var(--fnt-3);
+  font-weight: 200;
+}
+
+footer .socialsFooter {
+  grid-area: social;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+footer .socialsFooter ul {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2em;
+  align-items: center;
+}
+
+footer .copyFooter {
+  grid-area: copy;
+  width: 100%;
+  height: 100%;
+  font-size: 0.65em;
+}
+
 /**MEDIA QUERIES**/
+
+/*****TABLET****/
 @media screen and (min-height: 600px) {
   main #home .art-tittle h1 {
     font-family: var(--fnt-3);
@@ -313,6 +372,7 @@ main #home #svg {
   }
 }
 
+/*****TABLET****/
 @media screen and (min-width: 768px) {
   main #home #svg {
     height: 13em;
@@ -350,8 +410,40 @@ main #home #svg {
   main #home .art-tittle h1 {
     font-size: 2em;
   }
+
+  /**AJUSTES DEL FOOTER PARA TABLET*/
+  footer {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto 0.5fr;
+    grid-template-areas:
+      "logo info social"
+      "copy copy copy";
+    row-gap: 1em;
+  }
+
+  footer .informationFooter h2 {
+    font-size: 1.5em;
+  }
+
+  footer .informationFooter h3 {
+    font-size: 1.3em;
+  }
+
+  footer .informationFooter h4 {
+    font-size: 1.1em;
+  }
+
+  footer .socialsFooter img {
+    width: 2em;
+    height: 2em;
+  }
+
+  footer .copyFooter {
+    font-size: 1em;
+  }
 }
 
+/*****DESKTOP****/
 @media screen and (min-width: 1024px) {
   .ic-socials:hover {
     transform: scale(1.2);
@@ -456,11 +548,12 @@ main #home #svg {
   }
 
   main #home .art-information .containerSkills {
+    width: 100%;
     height: 2.5em;
   }
 
   main #home .art-information .containerSkills h3 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 
   main #home .containerSocials a {
@@ -500,6 +593,32 @@ main #home #svg {
     opacity: 1;
     width: 6.5em;
     transform: translateY(2.7em);
+  }
+}
+
+/**KEYFRAMES DEL EFECTO DESPLAZAMIENTO DE SKILLS EN HOME**/
+@keyframes desplace {
+  0%,
+  23% {
+    transform: translateY(0);
+  }
+
+  25%,
+  48% {
+    transform: translateY(-100%);
+  }
+
+  50%,
+  73% {
+    transform: translateY(-200%);
+  }
+
+  75%,
+  98% {
+    transform: translateY(-300%);
+  }
+  100% {
+    transform: translateY(-300%);
   }
 }
 
