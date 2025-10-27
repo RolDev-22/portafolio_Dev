@@ -44,8 +44,8 @@
   border-radius: 0.5em;
 }
 
-.cont-img::after,
-.cont-img::before {
+.cont-img-befAf::after,
+.cont-img-befAf::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -57,11 +57,11 @@
   box-shadow: 0px 0px 5px 5px var(--clr-4);
 }
 
-.cont-img::after {
+.cont-img-befAf::after {
   transform: rotate(15deg);
 }
 
-.cont-img::before {
+.cont-img-befAf::before {
   transform: rotate(-15deg);
 }
 
@@ -197,7 +197,7 @@ header button span {
   background-color: var(--clr-4);
 }
 
-/**AJUSTES DE SECCIÓN HOME**/
+/**AJUSTES DE SECCIÓN INICIO**/
 main #home {
   position: relative;
   display: grid;
@@ -234,7 +234,7 @@ main #home .cont-img {
   z-index: 2;
 }
 
-main #home .art-information {
+.art-information {
   grid-area: information;
   width: 90%;
   display: flex;
@@ -282,6 +282,37 @@ main #home #svg {
   bottom: 0;
   left: 0;
   z-index: 0;
+}
+
+/**AJUSTES DE LA SECCION SOBRE MI MOBILE*/
+main #about {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas:
+    "tittle"
+    "information"
+    "cont-img";
+}
+
+main #about .container-tittle {
+  grid-area: tittle;
+}
+
+main #about .art-information {
+  grid-area: information;
+}
+
+main #about .art-information p {
+  text-align: justify;
+}
+
+main #about .cont-img {
+  grid-area: cont-img;
+  box-shadow: none;
+  border: none;
 }
 
 /**AJUSTES DEL FOOTER PARA MOBILE*/
@@ -362,7 +393,7 @@ footer .copyFooter {
 
 /**MEDIA QUERIES**/
 
-/*****TABLET****/
+/*****MOBILE****/
 @media screen and (min-height: 600px) {
   main #home .art-tittle h1 {
     font-family: var(--fnt-3);
@@ -401,12 +432,18 @@ footer .copyFooter {
     font-size: 1.7em;
   }
 
+  /**AJUSTES DE LA SECCION INICIO PARA TABLET*/
   main #home .art-tittle {
     width: 100%;
   }
 
   main #home .art-tittle h1 {
     font-size: 2em;
+  }
+
+  /**AJUSTES DE LA SECCION SOBRE MI PARA TABLET*/
+  main #about {
+    background-color: green;
   }
 
   /**AJUSTES DEL FOOTER PARA TABLET*/
