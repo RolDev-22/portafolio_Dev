@@ -188,6 +188,7 @@ header button {
   background: transparent;
   border: none;
   z-index: 2;
+  margin-right: 10px;
 }
 
 header button span {
@@ -306,7 +307,80 @@ main #about .art-information {
 }
 
 main #about .art-information p {
+  position: relative;
   text-align: justify;
+  font-size: 0.7em;
+  padding: 0.3em;
+  padding-top: 1.5em;
+  border-radius: 0.5em;
+  border: 1px solid var(--clr-4);
+  box-shadow: 0px 3px 5px var(--clr-4);
+}
+
+main #about .art-information p::after {
+  position: absolute;
+  content: "";
+  width: 7em;
+  top: 0;
+  left: 0.5em;
+  border: 15px solid transparent;
+  border-top-color: var(--clr-4);
+}
+
+main #about .art-information p::before {
+  position: absolute;
+  content: "RolDev-22";
+  top: 0.2em;
+  left: 2.3em;
+  width: 6em;
+  height: 1em;
+  display: grid;
+  place-items: center;
+  border-radius: 0.5em;
+  background-color: var(--clr-1);
+  border-top-color: var(--clr-3);
+  z-index: 1;
+}
+
+main #about .skilsContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0.2em;
+}
+
+main #about .skilsContainer h3 {
+  display: flex;
+  width: 40%;
+  justify-content: center;
+  padding: 0.2em;
+  background-color: var(--clr-5);
+  transform: skew(-35deg);
+}
+
+main #about .skilsContainer ul {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 0.2em;
+  gap: 0.2em;
+}
+
+main #about .skilsContainer ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  font-family: var(--fnt-4);
+  color: white;
+  background-color: var(--clr-3);
 }
 
 main #about .cont-img {
@@ -399,6 +473,10 @@ footer .copyFooter {
     font-family: var(--fnt-3);
     font-size: 1.5em;
   }
+
+  main #about .art-information p {
+    font-size: 0.9em;
+  }
 }
 
 /*****TABLET****/
@@ -443,7 +521,18 @@ footer .copyFooter {
 
   /**AJUSTES DE LA SECCION SOBRE MI PARA TABLET*/
   main #about {
-    background-color: green;
+    text-align: left;
+    grid-template-columns: auto auto;
+    grid-template-rows: 0.5fr 1fr;
+  }
+
+  main #about .container-tittle {
+    justify-self: self-start;
+  }
+
+  main #about .cont-img {
+    justify-self: self-end;
+    margin: 0em;
   }
 
   /**AJUSTES DEL FOOTER PARA TABLET*/
@@ -628,6 +717,45 @@ footer .copyFooter {
     opacity: 1;
     width: 6.5em;
     transform: translateY(2.7em);
+  }
+
+  /**AJUSTES DE LA SECCION SOBRE MI PARA DESKTOP*/
+  main #about {
+    text-align: left;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.1fr 0.5fr;
+    grid-template-areas:
+      "tittle tittle"
+      "information cont-img";
+  }
+
+  main #about .art-information p {
+    font-size: 0.9em;
+  }
+
+  main #about .art-information p::after {
+    border-top-width: 1.4em;
+  }
+
+  main #about .art-information p::before {
+    left: 1.8em;
+  }
+
+  main #about .skilsContainer li {
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  main #about .skilsContainer li:hover {
+    background-color: var(--clr-4);
+  }
+
+  main #about .cont-img {
+    justify-self: center;
+    width: 60%;
+  }
+
+  main #about .skilsContainer ul li:hover {
+    background-color: var(--clr-4);
   }
 }
 
