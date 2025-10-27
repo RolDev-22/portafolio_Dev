@@ -729,8 +729,14 @@ footer .copyFooter {
       "information cont-img";
   }
 
+  main #about .art-information {
+    height: 100%;
+    margin-top: 1em;
+  }
+
   main #about .art-information p {
-    font-size: 0.9em;
+    font-size: 1em;
+    max-width: 30em;
   }
 
   main #about .art-information p::after {
@@ -742,16 +748,25 @@ footer .copyFooter {
   }
 
   main #about .skilsContainer li {
-    transition: background-color 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
   main #about .skilsContainer li:hover {
     background-color: var(--clr-4);
+    transform: scale(1.1);
+    margin: 0em 0.3em 0em 0.3em;
   }
 
   main #about .cont-img {
+    padding: 0.2em;
+    align-self: stretch;
     justify-self: center;
-    width: 60%;
+    width: 65%;
+  }
+
+  main #about .cont-img img {
+    aspect-ratio: 1/1;
+    object-fit: fill;
   }
 
   main #about .skilsContainer ul li:hover {
