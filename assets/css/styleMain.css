@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bungee&family=Cutive+Mono&family=Fascinate&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=New+Rocker&display=swap");
 
 :root {
   --clr-1: #0c151c;
@@ -12,6 +13,7 @@
   --fnt-2: "Bungee", cursive;
   --fnt-3: "Cutive Mono", monospace;
   --fnt-4: "Montserrat", sans-serif;
+  --fnt-5: "New Rocker", cursive;
 }
 
 /**CLASE DE USO COMUN**/
@@ -356,7 +358,9 @@ main #about .skilsContainer h3 {
   width: 40%;
   justify-content: center;
   padding: 0.2em;
-  background-color: var(--clr-5);
+  background-color: var(--clr-4);
+  color: var(--clr-1);
+  font-weight: bolder;
   transform: skew(-35deg);
 }
 
@@ -380,7 +384,7 @@ main #about .skilsContainer ul li {
   border-radius: 0.3em;
   font-family: var(--fnt-4);
   color: white;
-  background-color: var(--clr-3);
+  background-color: var(--clr-5);
 }
 
 main #about .cont-img {
@@ -590,6 +594,25 @@ footer .copyFooter {
     border-color: var(--clr-3);
   }
 
+  .socialsDesktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    padding: 1em;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    background-color: var(--clr-5);
+  }
+
+  .socialsDesktop img {
+    width: 3em;
+    height: 3em;
+    object-fit: contain;
+  }
+
   header {
     justify-self: center;
     width: 90%;
@@ -648,6 +671,14 @@ footer .copyFooter {
   }
 
   header nav ul li a:hover::after {
+    width: 100%;
+  }
+
+  header nav ul li a.activeLink {
+    color: var(--clr-3);
+  }
+
+  header nav ul li a.activeLink::after {
     width: 100%;
   }
 
@@ -759,18 +790,103 @@ footer .copyFooter {
 
   main #about .cont-img {
     padding: 0.2em;
-    align-self: stretch;
+    align-self: self-start;
     justify-self: center;
-    width: 65%;
+    width: 60%;
+    max-height: 75dvh;
   }
 
   main #about .cont-img img {
-    aspect-ratio: 1/1;
+    aspect-ratio: 0/1;
     object-fit: fill;
   }
 
   main #about .skilsContainer ul li:hover {
     background-color: var(--clr-4);
+  }
+
+  main #service .containerServices {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1em;
+    padding: 0.5em;
+  }
+
+  main #service .card-service {
+    position: relative;
+    width: 10%;
+    height: 25em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.5em;
+    background-color: var(--clr-4);
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+  }
+
+  main #service .card-service:after {
+    content: "";
+    width: 30%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.1));
+    z-index: 1;
+    position: absolute;
+  }
+
+  main #service .card-service.activeCard {
+    width: 30%;
+  }
+
+  main #service .card-service:nth-child(1) {
+    border-radius: 0.7em 0em 0em 0.7em;
+  }
+
+  main #service .card-service:nth-child(1)::after {
+    background: none;
+  }
+
+  main #service .card-service:last-child {
+    border-radius: 0em 0.7em 0.7em 0em;
+  }
+  main #service .card-service h2 {
+    margin-top: 0.5em;
+    transform: rotate(-90deg) translateY(0.6em) translateX(-4.5em);
+    transition: all 0.5s ease-in-out;
+    font-family: var(--fnt-5);
+    color: white;
+    font-size: 1.8em;
+  }
+
+  main #service .card-service.activeCard h2 {
+    text-align: center;
+    max-width: 70%;
+    transform: rotate(0deg);
+    font-size: 2.5em;
+    transition: all 0.3s ease-in-out;
+  }
+
+  main #service .card-service p {
+    position: relative;
+    font-family: var(--fnt-4);
+    font-size: 0.8em;
+    padding: 0.5em;
+    text-align: center;
+    color: white;
+    opacity: 0;
+    width: 0;
+    transition: all 0.3s ease-in-out;
+  }
+
+  main #service .card-service.activeCard p {
+    opacity: 1;
+    width: 100%;
   }
 }
 
