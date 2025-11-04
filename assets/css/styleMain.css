@@ -417,6 +417,15 @@ main #about .cont-img {
 
 /**AJUSTES DE LA SECCION SERVICIOS MOBILE*/
 
+main #service {
+  background-image: linear-gradient(
+    to left,
+    var(--clr-1),
+    var(--clr-4),
+    var(--clr-1)
+  );
+}
+
 main #service .containerServices {
   display: flex;
   flex-direction: column;
@@ -425,42 +434,86 @@ main #service .containerServices {
 }
 
 main #service .card-service {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   text-align: center;
   align-items: center;
   padding: 0.5em;
-  row-gap: 0.2em;
+  row-gap: 0.5em;
   border-radius: 0.3em;
   background-color: var(--clr-4);
   box-shadow: 1px 1px 5px 1px var(--clr-4);
   transition: all 0.5s ease-in-out;
+  z-index: 1;
+}
+
+main #service .card-service::before {
+  position: absolute;
+  content: "👆";
+  width: 3em;
+  height: 3em;
+  top: 0;
+  right: 0;
+  color: var(--clr-2);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 0.7em;
+  margin: 0.3em;
+  background-color: var(--clr-1);
+  z-index: -1;
+  animation: movingCard 1s ease-in-out alternate infinite;
+}
+
+@keyframes movingCard {
+  to {
+    font-size: 0.7em;
+    background-color: var(--clr-5);
+  }
+  from {
+    font-size: 0.72em;
+  }
+}
+
+main #service .card-service figure {
+  align-self: center;
+  justify-self: center;
+  user-select: none;
 }
 
 main #service .card-service h2 {
+  align-self: center;
+  justify-self: center;
   font-family: var(--fnt-5);
   font-size: 1.5em;
   color: white;
+  user-select: none;
 }
 
 main #service .card-service .p-service {
   text-align: center;
-  font-size: 0em;
   overflow: hidden;
+  width: 0;
   opacity: 0;
   height: 0;
   color: white;
   transition: all 0.5s ease-in-out;
+  user-select: none;
 }
 
 main #service .card-service .p-service.activeInfo {
   height: auto;
+  width: 100%;
   opacity: 1;
-  font-size: 0.7em;
 }
 
 main #service .card-service button {
+  align-self: center;
+  justify-self: center;
   width: 50%;
   padding: 0.3em;
   border-radius: 0.3em;
@@ -927,6 +980,10 @@ footer .copyFooter {
     border-radius: 0;
   }
 
+  main #service .card-service::before {
+    display: none;
+  }
+
   main #service .card-service:after {
     content: "";
     width: 30%;
@@ -972,19 +1029,15 @@ footer .copyFooter {
 
   main #service .card-service p {
     position: relative;
-    font-family: var(--fnt-4);
     font-size: 0.8em;
     padding: 0.5em;
-    text-align: center;
-    color: white;
-    opacity: 0;
-    width: 0;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out alternate;
   }
 
   main #service .card-service.activeCard p {
-    opacity: 1;
     width: 100%;
+    opacity: 1;
+    height: auto;
   }
 
   main #service .card-service button {

@@ -59,6 +59,24 @@
       "altImg": "logo desarrollo movil",
       "title": "Desarrollo movil",
       "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+    },
+    {
+      "icon": "assets/img/icons/ic_ptyp.svg",
+      "altImg": "logo prototipos",
+      "title": "Diseño de prototipos",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+    },
+    {
+      "icon": "assets/img/icons/ic_dswb.svg",
+      "altImg": "logo desarrollo web",
+      "title": "Desarollo Web",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+    },
+    {
+      "icon": "assets/img/icons/ic_dsmb.svg",
+      "altImg": "logo desarrollo movil",
+      "title": "Desarrollo movil",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
     }
   ]
 }

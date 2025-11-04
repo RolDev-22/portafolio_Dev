@@ -79,13 +79,18 @@ export function renderCard(infoCard) {
     img.alt = card.altImg; //asigna el alt del icono
     h2.textContent = card.title; //asigna el texto del h2
     p.textContent = card.description; //asigna el texto del p
-    button.textContent = "Ver mas";
+    p.classList.add("p-service");
 
     figure.appendChild(img);
     article.appendChild(figure);
     article.appendChild(h2);
     article.appendChild(p);
-    article.appendChild(button);
     contService.appendChild(article); //agrega el li al contenedor
   });
+
+  //activa la primera tarjeta por defecto
+  const cards = document.querySelectorAll(".card-service");
+  if (cards.length > 0) {
+    cards[0].classList.add("activeCard");
+  }
 }
