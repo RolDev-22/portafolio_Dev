@@ -1,0 +1,64 @@
+{
+  "service": ["Web Developer", "Prototype Designer", "Web Designer", "UI/UX"],
+
+  "skill": [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "React",
+    "GitHub",
+    "Bootstrap",
+    "Figma",
+    "Responsive Design",
+    "Firebase",
+    "Java"
+  ],
+
+  "icon": [
+    {
+      "img": "assets/img/icons/ic_git.svg",
+      "link": "https://github.com/RolDev-22",
+      "altImg": "logo github",
+      "span": "Github"
+    },
+    {
+      "img": "assets/img/icons/ic_itg.svg",
+      "link": "https://www.instagram.com/rolox.22/",
+      "altImg": "logo instagram",
+      "span": "Instagram"
+    },
+    {
+      "img": "assets/img/icons/ic_lkd.svg",
+      "link": "https://www.linkedin.com/in/rolando-ma",
+      "altImg": "logo linkedin",
+      "span": "Linkedin"
+    },
+    {
+      "img": "assets/img/icons/ic_eml.svg",
+      "link": "mailto:rolandomurilloaguirre22@gmail.com",
+      "altImg": "logo email",
+      "span": "Email"
+    }
+  ],
+
+  "card": [
+    {
+      "icon": "assets/img/icons/ic_ptyp.svg",
+      "altImg": "logo prototipos",
+      "title": "Diseño de prototipos",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+    },
+    {
+      "icon": "assets/img/icons/ic_dswb.svg",
+      "altImg": "logo desarrollo web",
+      "title": "Desarollo Web",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+    },
+    {
+      "icon": "assets/img/icons/ic_dsmb.svg",
+      "altImg": "logo desarrollo movil",
+      "title": "Desarrollo movil",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+    }
+  ]
+}
