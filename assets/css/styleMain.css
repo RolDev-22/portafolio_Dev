@@ -17,7 +17,7 @@
 }
 
 /**CLASE DE USO COMUN**/
-.actineNav {
+.activeNav {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
@@ -91,8 +91,22 @@
   display: flex;
   width: 2em;
   height: 2em;
-  transition: all 0.5s ease-in-out;
   border-radius: 50%;
+  transition: all 0.5s ease-in-out;
+}
+
+.socialsDesktop {
+  padding: 0.5em;
+  width: 3.5em;
+  height: 3.5em;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-5);
+}
+
+.socialsDesktop img {
+  width: 2em;
+  height: 2em;
 }
 
 .btn-class {
@@ -251,7 +265,7 @@ main #home .cont-img {
   user-select: none;
 }
 
-main #home .art-information .containerSkills {
+main #home .art-information .containerHabilitiesHome {
   height: 1.5em;
   display: flex;
   flex-direction: column;
@@ -259,7 +273,7 @@ main #home .art-information .containerSkills {
   overflow: hidden;
 }
 
-main #home .art-information .containerSkills h3 {
+main #home .art-information .containerHabilitiesHome h3 {
   font-size: 1.2em;
   text-align: center;
   transition: all 0.5s ease-in-out;
@@ -272,6 +286,14 @@ main #home .containerSocials {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+main #home .containerSocials .contLogo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 1em;
 }
 
 main #home .containerSocials a span {
@@ -393,6 +415,61 @@ main #about .cont-img {
   border: none;
 }
 
+/**AJUSTES DE LA SECCION SERVICIOS MOBILE*/
+
+main #service .containerServices {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  padding: 0.5em;
+}
+
+main #service .card-service {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  padding: 0.5em;
+  row-gap: 0.2em;
+  border-radius: 0.3em;
+  background-color: var(--clr-4);
+  box-shadow: 1px 1px 5px 1px var(--clr-4);
+  transition: all 0.5s ease-in-out;
+}
+
+main #service .card-service h2 {
+  font-family: var(--fnt-5);
+  font-size: 1.5em;
+  color: white;
+}
+
+main #service .card-service .p-service {
+  text-align: center;
+  font-size: 0em;
+  overflow: hidden;
+  opacity: 0;
+  height: 0;
+  color: white;
+  transition: all 0.5s ease-in-out;
+}
+
+main #service .card-service .p-service.activeInfo {
+  height: auto;
+  opacity: 1;
+  font-size: 0.7em;
+}
+
+main #service .card-service button {
+  width: 50%;
+  padding: 0.3em;
+  border-radius: 0.3em;
+  font-size: 1em;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  background-color: var(--clr-1);
+}
+
 /**AJUSTES DEL FOOTER PARA MOBILE*/
 footer {
   width: 100%;
@@ -462,6 +539,10 @@ footer .socialsFooter ul {
   flex-direction: row;
   column-gap: 2em;
   align-items: center;
+}
+
+footer a span {
+  display: none;
 }
 
 footer .copyFooter {
@@ -537,6 +618,21 @@ footer .copyFooter {
   main #about .cont-img {
     justify-self: self-end;
     margin: 0em;
+  }
+
+  main #service .containerServices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 0.5em;
+    padding: 0.5em;
+  }
+
+  main #service .card-service {
+    width: 95%;
+    margin: 0.5em;
   }
 
   /**AJUSTES DEL FOOTER PARA TABLET*/
@@ -702,12 +798,12 @@ footer .copyFooter {
     font-size: 2.5em;
   }
 
-  main #home .art-information .containerSkills {
+  main #home .art-information .containerHabilitiesHome {
     width: 100%;
     height: 2.5em;
   }
 
-  main #home .art-information .containerSkills h3 {
+  main #home .art-information .containerHabilitiesHome h3 {
     font-size: 2.2em;
   }
 
@@ -767,7 +863,7 @@ footer .copyFooter {
 
   main #about .art-information p {
     font-size: 1em;
-    max-width: 30em;
+    max-width: 35em;
   }
 
   main #about .art-information p::after {
@@ -827,6 +923,8 @@ footer .copyFooter {
     background-color: var(--clr-4);
     transition: all 0.5s ease-in-out;
     overflow: hidden;
+    margin: 0;
+    border-radius: 0;
   }
 
   main #service .card-service:after {
@@ -887,6 +985,10 @@ footer .copyFooter {
   main #service .card-service.activeCard p {
     opacity: 1;
     width: 100%;
+  }
+
+  main #service .card-service button {
+    display: none;
   }
 }
 
