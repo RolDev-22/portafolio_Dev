@@ -2,6 +2,7 @@ const btnMenu = document.querySelector("header button");
 const linksMenu = document.querySelectorAll("header nav ul li a");
 const containerServiceCards = document.getElementById("contService");
 const cards = document.querySelectorAll(".card-service");
+const containerInput = document.querySelectorAll(".containerInput");
 
 btnMenu.addEventListener("click", () => {
   const nav = document.querySelector("header nav");
@@ -50,4 +51,24 @@ containerServiceCards.addEventListener("click", (e) => {
       }
     }
   }
+});
+
+containerInput.forEach((container) => {
+  const input = container.querySelector(".inputActive");
+  input.addEventListener("focus", () => {
+    input.style.borderColor = "var(--clr-4)";
+    const label = container.querySelector(".labelTransform");
+    if (label) {
+      label.classList.add("selectedLabel");
+    }
+  });
+
+  input.addEventListener("blur", () => {
+    input.style.borderColor = "var(--clr-5)";
+    const label = container.querySelector(".labelTransform");
+
+    if (label && input.value.length === 0) {
+      label.classList.remove("selectedLabel");
+    }
+  });
 });

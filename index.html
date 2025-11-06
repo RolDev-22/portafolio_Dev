@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -20,7 +20,7 @@
                 <li><a id="link-about" href="#about">Sobre Mi</a></li>
                 <li><a id="link-service" href="#service">Servicios</a></li>
                 <li><a id="link-proyects" href="#sect-4">Proyectos</a></li>
-                <li><a id="link-contact" href="#sect-5">Contacto</a></li>
+                <li><a id="link-contact" href="#contact">Contacto</a></li>
             </ul>
         </nav>
         <button>
@@ -43,11 +43,9 @@
                     <!-- CONTENIDO DINÁMICO DESDE JS -->
                 </div>
                 <a class="btn-class" download="CV_Rolando Murillo" href="cv/CV_Rolando Murillo.pdf">Descargar CV</a>
-                <div class="containerSocials">
-                    <ul class="contLogo ulSocials">
-                        <!-- CONTENIDO DINÁMICO DESDE JS -->
-
-                </div>
+                <ul class="ulSocials">
+                    <!-- CONTENIDO DINÁMICO DESDE JS -->
+                </ul>
             </article>
             <svg id="svg" viewBox="0 0 1440 490" preserveAspectRatio="none" width="100%" height="100%"
                 xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
@@ -97,7 +95,7 @@
 
         <!-- SECCIÓN SOBRE MI-->
         <section class="sectionStyle" id="about">
-            <div class="container-tittle">
+            <div class="tittleClass">
                 <h2>Sobre Mi</h2>
             </div>
             <article class="art-information">
@@ -113,7 +111,7 @@
                     de usuario.
                 </p>
                 <div class="skilsContainer">
-                    <h3>Skills</h3>
+                    <h3>Skills y Tecnologías</h3>
                     <ul id="contSkill">
                         <!-- CONTENIDO DINÁMICO DESDE JS -->
                     </ul>
@@ -126,7 +124,7 @@
 
         <!-- SECCION SERVICIOS-->
         <section class="sectionStyle" id="service">
-            <div class="container-tittle">
+            <div class="tittleClass">
                 <h2>Servicios</h2>
             </div>
             <section class="containerServices" id="contService">
@@ -136,15 +134,47 @@
 
         <!-- SECCION PROYECTOS-->
         <section class="sectionStyle" id="sect-4">
-            <div class="container-tittle">
+            <div class="tittleClass">
                 <h2>Proyectos</h2>
             </div>
         </section>
 
         <!-- SECCION CONTACTO-->
-        <section class="sectionStyle" id="sect-5">
-            <div class="container-tittle">
+        <section class="sectionStyle" id="contact">
+            <div class="tittleClass">
                 <h2>Contacto</h2>
+            </div>
+            <div class="generalContainerForm">
+                <div class="containerContactForm">
+                    <p>No dudes en contactarme, sería un gusto colaborar con tigo</p>
+                    <em>@RolDev-22</em>
+                    <ul class="ulSocials">
+                        <!-- CONTENIDO DINÁMICO DESDE JS -->
+                    </ul>
+                    <p class="pLogoForm"><img src="assets/img/icons/ic_map.svg" alt=""> Costa Rica</p>
+                </div>
+
+                <div class="containerForm">
+                    <form id="formContact">
+                        <div class="containerInput">
+                            <label for="inputName" class="labelTransform">Nombre</label>
+                            <input class="inputActive" type="text" name="inputName" id="inputName">
+                        </div>
+                        <div class="containerInput">
+                            <label for="inputEmail" class="labelTransform">Corre</label>
+                            <input class="inputActive" type="email" name="inputEmail" id="inputEmail">
+                        </div>
+                        <div class="containerInput">
+                            <label for="inputAffair" class="labelTransform">Asunto</label>
+                            <input class="inputActive" type="text" name="inputAffair" id="inputAffair">
+                        </div>
+                        <div class="containerInput">
+                            <label for="input" class="labelTransform">Mensaje</label>
+                            <textarea class="inputActive" name="inputMessage" id="inputMessage"></textarea
+                        </div>
+                        <button class="btn-class">Enviar</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -161,7 +191,7 @@
         </section>
         <section class="socialsFooter">
             <h3>Seguime</h3>
-            <ul class="contLogo ulSocials">
+            <ul class="ulSocials">
                 <!-- CONTENIDO DINÁMICO DESDE JS -->
             </ul>
         </section>

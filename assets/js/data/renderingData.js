@@ -73,7 +73,7 @@ export function renderCard(infoCard) {
     const button = document.createElement("button"); //crea el elemento button
 
     article.classList.add("card-service", "card");
-    figure.classList.add("ic-socials", "socialsDesktop");
+    figure.classList.add("ic-socials", "ic-cardService");
 
     img.src = card.icon; //asigna la url del icono
     img.alt = card.altImg; //asigna el alt del icono
