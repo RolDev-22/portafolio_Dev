@@ -831,9 +831,6 @@ footer .copyFooter {
 /**-----TABLET CON PANTALLA GRANDE------**/
 
 @media screen and (max-width: 1024px) and (min-height: 1200px) {
-  main #contact .generalContainerForm .containerForm {
-  }
-
   main #contact .generalContainerForm .containerForm form {
     row-gap: 5em;
   }
@@ -1186,12 +1183,12 @@ footer .copyFooter {
 
   main #contact .generalContainerForm .containerContactForm {
     background-color: var(--clr-4);
-    padding: 3em;
+    padding: 4em;
     border-radius: 82% 18% 80% 20% / 25% 64% 36% 75%;
     border: 1px inset white;
     box-shadow: 0px 0px 30px 5px var(--clr-4);
     row-gap: 1.5em;
-    font-size: 1em;
+    font-size: 0.9em;
   }
 
   main #contact .containerContactForm p,
@@ -1205,7 +1202,7 @@ footer .copyFooter {
   }
 
   main #contact .generalContainerForm .containerForm {
-    width: 80%;
+    width: 90%;
   }
 
   main #contact .containerForm form {
@@ -1218,7 +1215,7 @@ footer .copyFooter {
 
   main #contact .containerForm .containerInput label {
     position: absolute;
-    top: 0.3em;
+    top: 0.5em;
     left: 0.5em;
     font-size: 1.5em;
     opacity: 0.2;
@@ -1227,7 +1224,7 @@ footer .copyFooter {
   }
 
   main #contact .containerForm .containerInput label.selectedLabel {
-    transform: translateY(-1.3em) scale(1.1);
+    transform: translateY(-1.5em) scale(1.1);
     opacity: 1;
     color: var(--clr-4);
   }
