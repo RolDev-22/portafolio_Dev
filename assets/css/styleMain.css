@@ -588,8 +588,8 @@ main #contact .containerForm form .containerInput {
 main #contact .containerForm form .containerInput input,
 main #contact .containerForm form .containerInput textarea {
   width: 100%;
-  padding: 0.5em;
-  border-radius: 0.5em;
+  padding: 0.4em;
+  border-radius: 0.3em;
   resize: none;
   background: transparent;
   border: 2px solid var(--clr-5);
@@ -1206,7 +1206,8 @@ footer .copyFooter {
   }
 
   main #contact .containerForm form {
-    row-gap: 1.5em;
+    row-gap: 0.5em;
+    transition: all 0.5s ease-in-out;
   }
 
   main #contact .containerForm .containerInput {
@@ -1218,15 +1219,22 @@ footer .copyFooter {
     top: 0.5em;
     left: 0.5em;
     font-size: 1.5em;
-    opacity: 0.2;
+    opacity: 0.4;
     color: var(--clr-2);
     transition: all 0.5s ease-in-out;
+    user-select: none;
   }
 
   main #contact .containerForm .containerInput label.selectedLabel {
-    transform: translateY(-1.5em) scale(1.1);
+    transform: translateY(-1.5em);
     opacity: 1;
     color: var(--clr-4);
+  }
+
+  main #contact .containerForm .containerInput span {
+    margin: 0em 0em 0.5em 0em;
+    font-size: 0.7em;
+    color: var(--clr-3);
   }
 }
 

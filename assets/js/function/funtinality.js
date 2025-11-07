@@ -4,11 +4,15 @@ const containerServiceCards = document.getElementById("contService");
 const cards = document.querySelectorAll(".card-service");
 const containerInput = document.querySelectorAll(".containerInput");
 
+/***---------------------------EVENTOS---------------------------***/
+
+//funcionalidad del botón del header que permite abrir y cerrar el menu
 btnMenu.addEventListener("click", () => {
   const nav = document.querySelector("header nav");
   nav.classList.toggle("activeNav");
 });
 
+//función que permite cerrar el menu al hacer click en alguno de los links del menú
 linksMenu.forEach((link) => {
   link.addEventListener("click", () => {
     const nav = document.querySelector("header nav");
@@ -16,6 +20,7 @@ linksMenu.forEach((link) => {
   });
 });
 
+//función que permite activar la tarjeta al pasar el mouse por ella
 containerServiceCards.addEventListener("mouseover", (e) => {
   const card = e.target.closest(".card-service");
 
@@ -29,6 +34,7 @@ containerServiceCards.addEventListener("mouseover", (e) => {
   }
 });
 
+//función que permite activar la informacion de la tarjeta al hacer click esto para versión mobile
 containerServiceCards.addEventListener("click", (e) => {
   if (window.innerWidth < 1024) {
     const card = e.target.closest(".card-service");
@@ -38,13 +44,12 @@ containerServiceCards.addEventListener("click", (e) => {
 
       if (p) {
         const isActive = p.classList.contains("activeInfo");
-
-        // 🔄 Desactiva todos los <p> activos
+        // Desactiva todos los <p> activos
         document.querySelectorAll(".p-service.activeInfo").forEach((el) => {
           el.classList.remove("activeInfo");
         });
 
-        // ✅ Si el actual no estaba activo, lo activa
+        // Si el actual no estaba activo, lo activa
         if (!isActive) {
           p.classList.add("activeInfo");
         }
@@ -53,20 +58,27 @@ containerServiceCards.addEventListener("click", (e) => {
   }
 });
 
+//función que permite activar el label al escribir en el input
 containerInput.forEach((container) => {
   const input = container.querySelector(".inputActive");
+  const label = container.querySelector(".labelTransform");
+
+  // Agrega la clase selectedLabel al label si el input tiene contenido
+  if (label && input.value.length > 0) {
+    label.classList.add("selectedLabel");
+  }
+
+  // Agrega la clase selectedLabel al label cuando se enfoca el input
   input.addEventListener("focus", () => {
     input.style.borderColor = "var(--clr-4)";
-    const label = container.querySelector(".labelTransform");
     if (label) {
       label.classList.add("selectedLabel");
     }
   });
 
+  // Quita la clase selectedLabel al label cuando se desenfoca el input y no tenga contenido
   input.addEventListener("blur", () => {
     input.style.borderColor = "var(--clr-5)";
-    const label = container.querySelector(".labelTransform");
-
     if (label && input.value.length === 0) {
       label.classList.remove("selectedLabel");
     }
