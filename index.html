@@ -156,26 +156,37 @@
                 </div>
 
                 <div class="containerForm">
+                    <section class="modalNotification" id="modalContact">
+                        <article class="modalBody">
+                            <h1>RolDev-22 Notifica</h1>
+                            <p></p>
+                            <button id="btnCloseModal" class="btn-class">Cerrar</button>
+                        </article>
+                    </section>
                     <form id="formContact">
                         <div class="containerInput">
                             <label for="inputName" class="labelTransform">Nombre</label>
-                            <input class="inputActive" type="text" name="inputName" id="inputName" required>
+                            <input class="inputActive" type="text" name="inputName" id="inputName" autocomplete="off"
+                                required>
                             <span></span>
                         </div>
                         <div class="containerInput">
                             <label for="inputEmail" class="labelTransform">Correo</label>
-                            <input class="inputActive" type="email" name="inputEmail" id="inputEmail" required>
+                            <input class="inputActive" type="email" name="inputEmail" id="inputEmail" autocomplete="off"
+                                required>
                             <span></span>
                         </div>
                         <div class="containerInput">
                             <label for="inputAffair" class="labelTransform">Asunto</label>
-                            <input class="inputActive" type="text" name="inputAffair" id="inputAffair" required>
+                            <input class="inputActive" type="text" name="inputAffair" id="inputAffair"
+                                autocomplete="off" required>
                             <span></span>
                         </div>
                         <div class="containerInput">
                             <label for="input" class="labelTransform">Mensaje</label>
-                            <textarea class="inputActive" name="inputMessage" id="inputMessage" required></textarea
-                                    
+                            <textarea class="inputActive" name="inputMessage" id="inputMessage" autocomplete="off"
+                                required></textarea>
+                            <span></span>
                         </div>
                         <button id="btnFormSubmit" class="btn-class">Enviar</button>
                     </form>

@@ -4,6 +4,21 @@ const containerServiceCards = document.getElementById("contService");
 const cards = document.querySelectorAll(".card-service");
 const containerInput = document.querySelectorAll(".containerInput");
 
+//**Para activar los labels de los inputs cuando estos tienen contenido al recargar la página*/
+window.addEventListener("load", () => {
+  document.querySelectorAll(".containerInput").forEach((container) => {
+    //selecccionar y recorrer los contenedores
+    container.querySelectorAll(".inputActive").forEach((input) => {
+      //selecccionar y recorrer los inputs
+      const label = input.previousElementSibling; //selecccionar el label asociado al input
+      if (label && input.value.trim()) {
+        //si el label y el input tienen contenido
+        label.classList.add("selectedLabel");
+      }
+    });
+  });
+});
+
 /***---------------------------EVENTOS---------------------------***/
 
 //funcionalidad del botón del header que permite abrir y cerrar el menu

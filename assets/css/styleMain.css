@@ -17,6 +17,46 @@
 }
 
 /**CLASE DE USO COMUN**/
+.modalNotification {
+  position: absolute;
+  width: clamp(200px, 50%, 500px);
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  border-radius: 0.2em;
+  box-shadow: 0px 0px 5px 5px var(--clr-4);
+  background-color: var(--clr-1);
+  transition: all 0.5s ease-in-out;
+  z-index: 2;
+}
+
+.modalNotification.modalActive {
+  display: flex;
+  opacity: 1;
+  transform: translateY(5em) scale(1.1);
+}
+
+.modalNotification .modalBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  padding: 1.2em;
+  row-gap: 1em;
+}
+
+.modalNotification .modalBody h1 {
+  font-size: 1.5em;
+}
+
+.modalNotification button {
+  justify-self: center;
+}
+
 .activeNav {
   opacity: 1;
   transform: translateY(0) scale(1);
@@ -562,6 +602,7 @@ main #contact .containerContactForm .pLogoForm img {
 }
 
 main #contact .containerForm {
+  position: relative;
   width: 100%;
   display: grid;
   place-items: center;
@@ -1173,12 +1214,9 @@ footer .copyFooter {
   /**AJUSTES DE LA SECCION CONTACTO DESKTOP*/
 
   main #contact .generalContainerForm {
-    grid-template-columns: 0.3fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     grid-template-areas: "contInf ContForm";
-  }
-  main #contact .generalContainerForm {
-    grid-template-columns: 1fr 1fr;
   }
 
   main #contact .generalContainerForm .containerContactForm {
@@ -1202,23 +1240,24 @@ footer .copyFooter {
   }
 
   main #contact .generalContainerForm .containerForm {
-    width: 90%;
+    width: 80%;
   }
 
   main #contact .containerForm form {
-    row-gap: 0.5em;
+    row-gap: 0.1em;
     transition: all 0.5s ease-in-out;
   }
 
   main #contact .containerForm .containerInput {
     position: relative;
+    row-gap: 0.3em;
   }
 
   main #contact .containerForm .containerInput label {
     position: absolute;
     top: 0.5em;
     left: 0.5em;
-    font-size: 1.5em;
+    font-size: 0.5em;
     opacity: 0.4;
     color: var(--clr-2);
     transition: all 0.5s ease-in-out;
@@ -1232,7 +1271,7 @@ footer .copyFooter {
   }
 
   main #contact .containerForm .containerInput span {
-    margin: 0em 0em 0.5em 0em;
+    margin: 0em 0em 1em 0em;
     font-size: 0.7em;
     color: var(--clr-3);
   }
