@@ -8,6 +8,8 @@
   --clr-4: #6b99c3;
   --clr-5: #16354d;
   --clr-6: #000000;
+  --clr-7: #ffffff;
+  --clr-8: #3feff2;
 
   --fnt-1: "Fascinate", cursive;
   --fnt-2: "Bungee", cursive;
@@ -149,6 +151,12 @@
   min-height: 100vh;
   padding-top: 6em;
   justify-content: space-evenly;
+  background-image: linear-gradient(
+    to right,
+    var(--clr-5),
+    var(--clr-6),
+    var(--clr-6)
+  );
 }
 
 .tittleClass {
@@ -162,6 +170,7 @@
 .tittleClass h2 {
   font-family: var(--fnt-2);
   font-size: 1.5em;
+  color: var(--clr-8);
 }
 
 .ic-socials {
@@ -197,7 +206,7 @@
   border-radius: 0.1em;
   background-color: var(--clr-5);
   border: 1px solid var(--clr-4);
-  color: white;
+  color: var(--clr-7);
   transition: all 0.5s ease-in-out;
 }
 
@@ -321,7 +330,7 @@ main #home .art-tittle h1 {
 }
 
 main #home .art-tittle h1 em {
-  color: var(--clr-4);
+  color: var(--clr-8);
 }
 
 main #home .cont-img {
@@ -427,7 +436,7 @@ main #about .art-information p::after {
   top: 0;
   left: 0.5em;
   border: 15px solid transparent;
-  border-top-color: var(--clr-4);
+  border-top-color: var(--clr-8);
 }
 
 main #about .art-information p::before {
@@ -459,7 +468,7 @@ main #about .skilsContainer h3 {
   width: 100%;
   justify-content: center;
   padding: 0.2em;
-  background-color: var(--clr-4);
+  background-color: var(--clr-8);
   color: var(--clr-1);
   font-weight: bolder;
   transform: skew(-35deg);
@@ -484,7 +493,7 @@ main #about .skilsContainer ul li {
   padding: 0.3em;
   border-radius: 0.3em;
   font-family: var(--fnt-4);
-  color: white;
+  color: var(--clr-7);
   background-color: var(--clr-5);
 }
 
@@ -492,6 +501,13 @@ main #about .cont-img {
   grid-area: cont-img;
   box-shadow: none;
   border: none;
+  box-shadow: inset 10px 0px 1px 1px var(--clr-5);
+  padding: 0.1em;
+  border-radius: 0;
+}
+
+main #about .cont-img img {
+  border-radius: 0;
 }
 
 /**AJUSTES DE LA SECCION SERVICIOS MOBILE*/
@@ -499,9 +515,9 @@ main #about .cont-img {
 main #service {
   background-image: linear-gradient(
     to left,
-    var(--clr-1),
-    var(--clr-4),
-    var(--clr-1)
+    var(--clr-5),
+    var(--clr-6),
+    var(--clr-6)
   );
 }
 
@@ -559,7 +575,7 @@ main #service .card-service h2 {
   justify-self: center;
   font-family: var(--fnt-5);
   font-size: 1.5em;
-  color: white;
+  color: var(--clr-7);
   user-select: none;
 }
 
@@ -569,7 +585,7 @@ main #service .card-service .p-service {
   width: 0;
   opacity: 0;
   height: 0;
-  color: white;
+  color: var(--clr-7);
   transition: all 0.5s ease-in-out;
   user-select: none;
 }
@@ -593,6 +609,15 @@ main #service .card-service button {
 }
 
 /**AJUSTES DE LA SECCION CONTACTO MOBILE*/
+main #contact {
+  background-image: linear-gradient(
+    to left,
+    var(--clr-5),
+    var(--clr-6),
+    var(--clr-6)
+  );
+}
+
 main #contact .generalContainerForm {
   display: grid;
   place-items: center;
@@ -652,7 +677,7 @@ main #contact .containerForm form .containerInput {
 main #contact .containerForm form .containerInput input,
 main #contact .containerForm form .containerInput textarea {
   width: 100%;
-  padding: 0.4em;
+  padding: 0.9em;
   border-radius: 0.3em;
   resize: none;
   background: transparent;
@@ -824,6 +849,7 @@ footer .copyFooter {
   main #about .cont-img {
     justify-self: self-end;
     margin: 0em;
+    box-shadow: none;
   }
 
   main #service .containerServices {
@@ -1071,7 +1097,7 @@ footer .copyFooter {
     border-radius: 0.5em;
     transition: all 0.5s ease-in-out;
     text-align: center;
-    color: white;
+    color: var(--clr-7);
     border: 1px solid var(--clr-6);
     background-color: var(--clr-1);
     z-index: -1;
@@ -1096,6 +1122,7 @@ footer .copyFooter {
     grid-template-areas:
       "tittle tittle"
       "information cont-img";
+    box-shadow: 5px 0px 30px -20px #000022;
   }
 
   main #about .art-information {
@@ -1136,6 +1163,7 @@ footer .copyFooter {
     justify-self: center;
     width: 60%;
     max-height: 75dvh;
+    transform: translateY(-2em);
   }
 
   main #about .cont-img img {
@@ -1168,7 +1196,7 @@ footer .copyFooter {
     justify-content: flex-start;
     align-items: center;
     padding: 0.5em;
-    background-color: var(--clr-4);
+    background-color: var(--clr-5);
     transition: all 0.5s ease-in-out;
     overflow: hidden;
     margin: 0;
@@ -1210,7 +1238,7 @@ footer .copyFooter {
     transform: rotate(-90deg) translateY(0.6em) translateX(-4.5em);
     transition: all 0.5s ease-in-out;
     font-family: var(--fnt-5);
-    color: white;
+    color: var(--clr-7);
     font-size: 1.8em;
   }
 
@@ -1248,10 +1276,10 @@ footer .copyFooter {
   }
 
   main #contact .generalContainerForm .containerContactForm {
-    background-color: var(--clr-4);
+    background-color: var(--clr-8);
     padding: 4em;
     border-radius: 82% 18% 80% 20% / 25% 64% 36% 75%;
-    border: 1px inset white;
+    border: 1px inset var(--clr-7);
     box-shadow: 0px 0px 30px 5px var(--clr-4);
     row-gap: 1.5em;
     font-size: 0.9em;
@@ -1269,10 +1297,11 @@ footer .copyFooter {
 
   main #contact .generalContainerForm .containerForm {
     width: 80%;
+    transform: translateY(-1em);
   }
 
   main #contact .containerForm form {
-    row-gap: 0.1em;
+    row-gap: 0.3em;
     transition: all 0.5s ease-in-out;
   }
 
@@ -1283,7 +1312,7 @@ footer .copyFooter {
 
   main #contact .containerForm .containerInput label {
     position: absolute;
-    top: 0.5em;
+    top: 0.3em;
     left: 0.5em;
     font-size: 0.5em;
     opacity: 0.4;
@@ -1292,10 +1321,14 @@ footer .copyFooter {
     user-select: none;
   }
 
+  main #contact .containerForm form .containerInput input {
+    padding: 0.2em;
+  }
+
   main #contact .containerForm .containerInput label.selectedLabel {
-    transform: translateY(-1.5em);
+    transform: translateY(-1.2em);
     opacity: 1;
-    color: var(--clr-4);
+    color: var(--clr-8);
   }
 
   main #contact .containerForm .containerInput span {

@@ -85,7 +85,7 @@ containerInput.forEach((container) => {
 
   // Agrega la clase selectedLabel al label cuando se enfoca el input
   input.addEventListener("focus", () => {
-    input.style.borderColor = "var(--clr-4)";
+    input.style.borderColor = "var(--clr-8)";
     if (label) {
       label.classList.add("selectedLabel");
     }

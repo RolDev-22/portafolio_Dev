@@ -1,4 +1,4 @@
-const route = "docs/infoCards.json";
+const route = "docs/mainInfo.json";
 
 export async function getData() {
   try {
