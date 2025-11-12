@@ -20,23 +20,24 @@
 .modalNotification {
   position: absolute;
   width: clamp(200px, 50%, 500px);
-  top: 0;
   display: none;
   align-items: center;
   justify-content: center;
   text-align: center;
-  opacity: 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 0.2em;
   box-shadow: 0px 0px 5px 5px var(--clr-4);
   background-color: var(--clr-1);
   transition: all 0.5s ease-in-out;
+  opacity: 0;
   z-index: 2;
 }
 
 .modalNotification.modalActive {
   display: flex;
   opacity: 1;
-  transform: translateY(5em) scale(1.1);
 }
 
 .modalNotification .modalBody {
@@ -50,11 +51,33 @@
 }
 
 .modalNotification .modalBody h1 {
-  font-size: 1.5em;
+  font-size: 1em;
+}
+
+.modalNotification .modalBody span {
+  display: none;
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  border: 2px solid var(--clr-4);
+  border-top: none;
+  border-left: none;
+  animation: spinner 1s linear infinite;
+}
+
+.modalNotification .modalBody span.spinnerActive {
+  display: block;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .modalNotification button {
   justify-self: center;
+  font-size: 0.9em;
 }
 
 .activeNav {
@@ -645,6 +668,11 @@ main #contact .containerForm form .containerInput textarea {
 
 main #contact .containerForm form button {
   justify-self: center;
+  opacity: 0.3;
+}
+
+main #contact .containerForm form button.enabledBtn {
+  opacity: 1;
 }
 
 /**AJUSTES DEL FOOTER PARA MOBILE*/

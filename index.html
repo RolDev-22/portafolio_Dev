@@ -8,6 +8,9 @@
     <link rel="shortcut icon" href="assets/img/logopng.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/styleMain.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script>
+        emailjs.init("dWXczsekoDAtGcgZ0");
+    </script>
 </head>
 
 <body>
@@ -156,14 +159,14 @@
                 </div>
 
                 <div class="containerForm">
-                    <section class="modalNotification" id="modalContact">
-                        <article class="modalBody">
+                    <section class="modalNotification" id="modalContactId">
+                        <article class="modalBody" id="modalBodyId">
                             <h1>RolDev-22 Notifica</h1>
+                            <span></span>
                             <p></p>
-                            <button id="btnCloseModal" class="btn-class">Cerrar</button>
                         </article>
                     </section>
-                    <form id="formContact">
+                    <form id="formContact" novalidate>
                         <div class="containerInput">
                             <label for="inputName" class="labelTransform">Nombre</label>
                             <input class="inputActive" type="text" name="inputName" id="inputName" autocomplete="off"
@@ -188,7 +191,7 @@
                                 required></textarea>
                             <span></span>
                         </div>
-                        <button id="btnFormSubmit" class="btn-class">Enviar</button>
+                        <button id="btnFormSubmit" type="submit" class="btn-class" disabled>Enviar</button>
                     </form>
                 </div>
             </div>
