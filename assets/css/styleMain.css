@@ -147,6 +147,7 @@
 }
 
 .sectionStyle {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   padding-top: 6em;
@@ -1020,7 +1021,7 @@ footer .copyFooter {
   }
 
   header nav ul li a:hover {
-    color: var(--clr-3);
+    color: var(--clr-8);
   }
 
   header nav ul li a::after {
@@ -1028,21 +1029,13 @@ footer .copyFooter {
     position: absolute;
     width: 0%;
     height: 0.1em;
-    background-color: var(--clr-3);
+    background-color: var(--clr-8);
     bottom: 0;
     transition: all 0.5s ease-in-out;
     transform-origin: center;
   }
 
   header nav ul li a:hover::after {
-    width: 100%;
-  }
-
-  header nav ul li a.activeLink {
-    color: var(--clr-3);
-  }
-
-  header nav ul li a.activeLink::after {
     width: 100%;
   }
 
