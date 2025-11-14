@@ -1,4 +1,6 @@
 export function sendMail(data) {
+  emailjs.init("dWXczsekoDAtGcgZ0");
+
   return emailjs.send("service_tn2kwln", "template_2493m4c", {
     name: data.name,
     email: data.email,

@@ -55,7 +55,7 @@ form.addEventListener("submit", (e) => {
     inputs.forEach((input) => {
       localStorage.removeItem(input.id);
     });
-    //reloadPage();
+    reloadPage();
   }
 });
 
