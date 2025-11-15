@@ -969,7 +969,7 @@ footer .copyFooter {
     height: 5em;
     width: 5em;
     border-radius: 50%;
-    background-color: var(--clr-5);
+    background-color: var(--clr-1);
   }
 
   .ic-cardService img {

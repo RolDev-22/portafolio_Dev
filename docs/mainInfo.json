@@ -43,40 +43,46 @@
 
   "card": [
     {
-      "icon": "assets/img/icons/ic_ptyp.svg",
-      "altImg": "logo prototipos",
-      "title": "Diseño de prototipos",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
-    },
-    {
       "icon": "assets/img/icons/ic_dswb.svg",
       "altImg": "logo desarrollo web",
       "title": "Desarollo Web",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+      "description": "Soluciones web modernas, funcionales y memorables. Desarrollo estratégico de sitios web con diseño visual moderno, navegación intuitiva y tecnología actual. Cada proyecto se adapta a las necesidades del cliente, combinando estética, rendimiento y escalabilidad. Ideal para quienes buscan destacar su presencia digital, conectar con su audiencia y convertir visitas en resultados. Integración responsiva, optimización y experiencia de usuario."
     },
     {
       "icon": "assets/img/icons/ic_dsmb.svg",
       "altImg": "logo desarrollo movil",
       "title": "Desarrollo movil",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+      "description": "Aplicaciones móviles que conectan y resuelven. Desarrollo ágil y personalizado, con interfaces intuitivas, optimizadas y diseño atractivo, cada app se construye pensando en la experiencia del usuario, la escalabilidad y los objetivos del cliente, ideal para personas que buscan funcionalidad, impacto y eficiencia desde el bolsillo. Integración con bases de datos, notificaciones, formularios inteligentes y lógica robusta para tareas específicas, transforma ideas en herramientas móviles prácticas y accesibles"
+    },
+    {
+      "icon": "assets/img/icons/ic_grfcDng.svg",
+      "altImg": "logo Diseño grafico",
+      "title": "Diseño gráfico",
+      "description": "Diseño gráfico que comunica, emociona y transforma. Creación de piezas visuales impactantes, alineadas con la identidad de cada proyecto y sus objetivos estratégicos, desde logotipos hasta materiales educativos o promocionales, cada diseño combina estética, claridad y funcionalidad ideal para marcas, instituciones y emprendimientos que buscan destacar con estilo y coherencia visual, una propuesta creativa que convierte ideas en imágenes memorables, listas para conectar con cualquier audiencia."
     },
     {
       "icon": "assets/img/icons/ic_ptyp.svg",
       "altImg": "logo prototipos",
       "title": "Diseño de prototipos",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+      "description": "Prototipos interactivos que dan vida a tus ideas, diseño de interfaces funcionales, intuitivas y visualmente atractivas, listas para validar y evolucionar, cada prototipo combina estética, usabilidad y lógica de navegación, facilitando la toma de decisiones y el desarrollo ágil ideal para presentar conceptos, probar flujos de usuario y alinear equipos antes de escribir una sola línea de código, una solución estratégica que transforma requerimientos en experiencias visuales claras, dinámicas y centradas en el usuario."
     },
     {
-      "icon": "assets/img/icons/ic_dswb.svg",
-      "altImg": "logo desarrollo web",
-      "title": "Desarollo Web",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+      "icon": "assets/img/icons/ic_editVideo.svg",
+      "altImg": "logo Edit video",
+      "title": "Edición de video",
+      "description": "Edición de video que cautiva, comunica y emociona. Transformación de grabaciones en piezas audiovisuales dinámicas, limpias y con narrativa visual clara, cada proyecto se edita con precisión, ritmo visual y enfoque en el mensaje que se desea transmitir ideal para presentaciones educativas, institucionales, promocionales o personales que buscan impacto y coherencia una propuesta creativa que convierte contenido bruto en experiencias visuales memorables, pensadas para cautivar a públicos diversos"
     },
     {
-      "icon": "assets/img/icons/ic_dsmb.svg",
-      "altImg": "logo desarrollo movil",
-      "title": "Desarrollo movil",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic. Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus praesentium officiis veritatis. Placeat ipsa magnam quibusdam fugit, magni debitis et fuga non esse expedita rerum iusto minus quidem? Hic."
+      "icon": "assets/img/icons/ic_lgCrtng.svg",
+      "altImg": "logo creacion de logos",
+      "title": "Creación de logos",
+      "description": "Logotipos que representan, diferencian y perduran. Diseño de identidad visual auténtica, alineada con los valores, el propósito y el estilo de cada proyecto, cada logo se crea con enfoque estratégico, estética cuidada y versatilidad para múltiples plataformas y formatos una propuesta creativa que convierte conceptos en símbolos visuales únicos, listos para generar reconocimiento y conexión."
+    },
+    {
+      "icon": "assets/img/icons/ic_otmz.svg",
+      "altImg": "logo optimizacion",
+      "title": "Optimización/mantenimiento",
+      "description": "Mantenimiento web que asegura rendimiento, seguridad y continuidad, optimización técnica y visual para mejorar velocidad, accesibilidad y experiencia del usuario en todos los dispositivos. Actualización constante de contenidos, corrección de errores y ajustes estratégicos según las necesidades del proyecto."
     }
   ]
 }
