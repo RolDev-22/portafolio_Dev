@@ -158,7 +158,6 @@
     var(--clr-6),
     var(--clr-6)
   );
-  scroll-snap-align: end;
 }
 
 .tittleClass {
@@ -229,7 +228,6 @@
   box-sizing: border-box;
   color: var(--clr-3);
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   scrollbar-width: 0px;
 }
 
@@ -950,6 +948,14 @@ footer .copyFooter {
 
 /*****DESKTOP****/
 @media screen and (min-width: 1025px) {
+  * {
+    scroll-snap-type: y mandatory;
+  }
+
+  .sectionStyle {
+    scroll-snap-align: end;
+  }
+
   .ic-socials:hover {
     transform: scale(1.2);
   }
