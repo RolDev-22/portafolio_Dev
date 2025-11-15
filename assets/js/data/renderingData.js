@@ -55,16 +55,26 @@ export function renderSkill(InfoSkill) {
   const contSkill = document.getElementById("contSkill"); //contenedor de las habilidades
   InfoSkill.forEach((skill) => {
     //recorre el array de habilidades
+
     const li = document.createElement("li"); //crea el elemento li
-    li.textContent = skill; //asigna el texto de la habilidad
+    const img = document.createElement("img"); //crea el elemento img
+
+    li.classList.add("li-skill");
+    img.classList.add("ic-skill");
+
+    img.src = skill.ic; //asigna la url del icono
+    img.alt = skill.alt; //asigna el alt del icono
+    li.textContent = skill.skill; //asigna el texto de la habilidad
+
+    li.prepend(img);
     contSkill.appendChild(li); //agrega el li al contenedor
   });
 }
 
 export function renderCard(infoCard) {
   const contService = document.getElementById("contService"); //contenedor de las habilidades
-  infoCard.map((card) => {
-    //recorre el array de habilidades
+  infoCard.forEach((card) => {
+    //recorre el array de servicios
     const article = document.createElement("article"); //crea el elemento article
     const figure = document.createElement("figure"); //crea el elemento figure
     const img = document.createElement("img"); //crea el elemento img

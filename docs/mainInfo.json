@@ -2,16 +2,53 @@
   "service": ["Web Developer", "Prototype Designer", "Web Designer", "UI/UX"],
 
   "skill": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "GitHub",
-    "Bootstrap",
-    "Figma",
-    "Responsive Design",
-    "Firebase",
-    "Java"
+    {
+      "skill": "HTML",
+      "ic": "assets/img/icons/ic_html.svg",
+      "alt": "icon html"
+    },
+    { "skill": "CSS", "ic": "assets/img/icons/ic_css.svg", "alt": "icon css" },
+    {
+      "skill": "JavaScript",
+      "ic": "assets/img/icons/ic_js.svg",
+      "alt": "icon js"
+    },
+    {
+      "skill": "Bootstrap",
+      "ic": "assets/img/icons/ic_bstap.svg",
+      "alt": "icon bootstrap"
+    },
+    {
+      "skill": "React",
+      "ic": "assets/img/icons/ic_rct.svg",
+      "alt": "icon react"
+    },
+    {
+      "skill": "GitHub",
+      "ic": "assets/img/icons/ic_gthb.svg",
+      "alt": "icon github"
+    },
+    {
+      "skill": "Figma",
+      "ic": "assets/img/icons/ic_fgma.svg",
+      "alt": "icon figma"
+    },
+    {
+      "skill": "Responsive Design",
+      "ic": "assets/img/icons/ic_rspv.svg",
+      "alt": "icon responsive design"
+    },
+    {
+      "skill": "SQL Server",
+      "ic": "assets/img/icons/ic_sqlSrv.svg",
+      "alt": "icon SQL server"
+    },
+    {
+      "skill": "Firebase",
+      "ic": "assets/img/icons/ic_frbs.svg",
+      "alt": "icon firebase"
+    },
+    { "skill": "Java", "ic": "assets/img/icons/ic_jv.svg", "alt": "icon java" }
   ],
 
   "icon": [
