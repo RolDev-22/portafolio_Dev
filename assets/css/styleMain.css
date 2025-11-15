@@ -619,6 +619,58 @@ main #service .card-service button {
   background-color: var(--clr-1);
 }
 
+/** AJUSTES DE LA SECCIÓN PROYECTOS MOBILE**/
+
+main #project .containerProjects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 1em;
+  padding: 0.5em;
+  background-color: green;
+}
+
+main #project .cardProject {
+  width: clamp(200px, 95%, 400px);
+  min-height: 300px;
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-around;
+  row-gap: 0.5em;
+  box-shadow: 0px 0px 5px 5px var(--clr-4);
+  border-radius: 0.3em;
+  background-color: red;
+}
+
+main #project .cardProject .titleCardProject {
+  font-size: 1.2em;
+  font-family: var(--fnt-2);
+}
+
+main #project .cardProject .descritionProject {
+  font-size: 0.8em;
+  text-align: justify;
+}
+
+main #project .cardProject .containerBtnsProject {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  column-gap: 1em;
+  padding: 0.2em;
+  background-color: violet;
+}
+
+main #project .cardProject .containerBtnsProject .btn-project {
+  width: 45%;
+  padding: 0.5em;
+  font-size: 1em;
+}
+
 /**AJUSTES DE LA SECCION CONTACTO MOBILE*/
 main #contact {
   background-image: linear-gradient(
@@ -953,7 +1005,7 @@ footer .copyFooter {
   }
 
   .sectionStyle {
-    scroll-snap-align: end;
+    scroll-snap-align: start;
   }
 
   .ic-socials:hover {
@@ -1280,6 +1332,12 @@ footer .copyFooter {
 
   main #service .card-service button {
     display: none;
+  }
+
+  /** AJUSTES DE LA SECCIÓN PROYECTOS DESKTOP**/
+  main .sectNoneSnap {
+    scroll-snap-align: none;
+    background-color: violet !important;
   }
 
   /**AJUSTES DE LA SECCION CONTACTO DESKTOP*/
