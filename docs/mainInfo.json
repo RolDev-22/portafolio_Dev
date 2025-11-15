@@ -34,6 +34,12 @@
       "alt": "icon figma"
     },
     {
+      "skill": "Firebase",
+      "ic": "assets/img/icons/ic_frbs.svg",
+      "alt": "icon firebase"
+    },
+    { "skill": "Java", "ic": "assets/img/icons/ic_jv.svg", "alt": "icon java" },
+    {
       "skill": "Responsive Design",
       "ic": "assets/img/icons/ic_rspv.svg",
       "alt": "icon responsive design"
@@ -42,13 +48,7 @@
       "skill": "SQL Server",
       "ic": "assets/img/icons/ic_sqlSrv.svg",
       "alt": "icon SQL server"
-    },
-    {
-      "skill": "Firebase",
-      "ic": "assets/img/icons/ic_frbs.svg",
-      "alt": "icon firebase"
-    },
-    { "skill": "Java", "ic": "assets/img/icons/ic_jv.svg", "alt": "icon java" }
+    }
   ],
 
   "icon": [
