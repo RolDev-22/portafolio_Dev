@@ -104,3 +104,55 @@ export function renderCard(infoCard) {
     cards[0].classList.add("activeCard");
   }
 }
+
+/*
+export function renderGitHubRepos(repos) {
+  const containerProyect = document.getElementById("contProjects"); //contenedor de los proyectos
+
+  console.log(repos);
+
+  repos.forEach((repo) => {
+    const article = document.createElement("article"); //crea el elemento article
+    const h3 = document.createElement("h3"); //crea el elemento h3
+    const p = document.createElement("p"); //crea el elemento p
+    const ul = document.createElement("ul"); //crea el elemento ul
+    const divBtns = document.createElement("div"); //crea el contenedor de los botones
+    const btnVisit = document.createElement("a"); //crea el boton visitar
+    const btnCode = document.createElement("a"); //crea el boton codigo
+
+    article.classList.add("cardProject", "card");
+    ul.classList.add("ulLenguaje");
+    divBtns.classList.add("containerBtnsProject");
+    btnVisit.classList.add("btn-class", "btn-project");
+    btnCode.classList.add("btn-class", "btn-project");
+
+    h3.textContent = repo.name;
+    p.textContent = repo.description || "No description available.";
+
+    if (repo.languages_url) {
+      repo.languages_url.split(",").forEach((lang) => {
+        const liLang = document.createElement("li");
+        liLang.textContent = lang.trim();
+        ul.appendChild(liLang);
+      });
+    }
+
+    btnVisit.textContent = "Visitar";
+    btnCode.textContent = "Código";
+    btnVisit.href = repo.html_url;
+    btnVisit.target = "_blank";
+    btnCode.href = repo.html_url;
+    btnCode.target = "_blank";
+
+    divBtns.appendChild(btnVisit);
+    divBtns.appendChild(btnCode);
+    article.appendChild(h3);
+    article.appendChild(p);
+    article.appendChild(ul);
+    article.appendChild(divBtns);
+
+    containerProyect.appendChild(article);
+  });
+  
+}
+*/

@@ -1,4 +1,5 @@
 import { getData } from "./config/configGetData.js";
+import { getDataGit } from "./config/configGitData.js";
 import {
   renderHabilities,
   renderIcon,
@@ -16,4 +17,5 @@ async function main() {
   renderCard(data.card);
 }
 
+getDataGit();
 main();
