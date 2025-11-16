@@ -80,7 +80,6 @@ export function renderCard(infoCard) {
     const img = document.createElement("img"); //crea el elemento img
     const h2 = document.createElement("h2"); //crea el elemento h2
     const p = document.createElement("p"); //crea el elemento p
-    const button = document.createElement("button"); //crea el elemento button
 
     article.classList.add("card-service", "card");
     figure.classList.add("ic-socials", "ic-cardService");
@@ -90,6 +89,7 @@ export function renderCard(infoCard) {
     h2.textContent = card.title; //asigna el texto del h2
     p.textContent = card.description; //asigna el texto del p
     p.classList.add("p-service");
+    article.style.background = `linear-gradient(rgba(0, 0, 0, .8)),url(${card.background}) no-repeat top/cover`;
 
     figure.appendChild(img);
     article.appendChild(figure);

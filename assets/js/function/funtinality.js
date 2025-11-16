@@ -41,9 +41,9 @@ containerServiceCards.addEventListener("mouseover", (e) => {
 
   if (card) {
     // Elimina la clase de todas las tarjetas
-    document
-      .querySelectorAll(".card-service")
-      .forEach((c) => c.classList.remove("activeCard"));
+    document.querySelectorAll(".card-service").forEach((c) => {
+      c.classList.remove("activeCard");
+    });
     // Activa solo la tarjeta actual
     card.classList.add("activeCard");
   }
