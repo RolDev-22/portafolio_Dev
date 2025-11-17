@@ -8,17 +8,22 @@ const GIT_USR = "RolDev-22";
  * @returns {Promise<Array>} Una promesa que resuelve a un array de objetos con los datos procesados de los repositorios.
  */
 async function getDataGit() {
+  const cache = localStorage.getItem("reposData");
+  if (cache) {
+    const { timestamp, data } = JSON.parse(cache);
+    const oneHour = 60 * 60 * 1000;
+    if (Date.now() - timestamp < oneHour) {
+      return data;
+    }
+  }
+
   try {
-    // Obtener los repositorios del usuario
     const response = await fetch(
       `https://api.github.com/users/${GIT_USR}/repos`
     );
-    const data = await response.json(); // Array de repositorios
-
-    // Filtrar repositorios que tienen homepage
+    const data = await response.json();
     const reposConHomepage = data.filter((repo) => repo.homepage);
 
-    // Procesar cada repositorio para obtener lenguajes y preview.png
     const reposProcesados = await Promise.all(
       reposConHomepage.map(async (repo) => {
         const langs = await getLenguajes(repo);
@@ -36,7 +41,15 @@ async function getDataGit() {
       })
     );
 
-    return reposProcesados; // Array de objetos con los datos procesados
+    localStorage.setItem(
+      "reposData",
+      JSON.stringify({
+        timestamp: Date.now(),
+        data: reposProcesados,
+      })
+    );
+
+    return reposProcesados;
   } catch (error) {
     console.error("Error en extraer datos: ", error);
     return [];
@@ -45,7 +58,26 @@ async function getDataGit() {
 
 // Obtener los lenguajes de un repositorio procesados
 function getLenguajes(repo) {
-  return fetch(repo.languages_url).then((response) => response.json());
+  const cacheKey = `langCache-${repo.full_name}`;
+  const cache = localStorage.getItem(cacheKey);
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (cache) {
+    const { timestamp, data } = JSON.parse(cache);
+    if (Date.now() - timestamp < oneDay) {
+      return Promise.resolve(data);
+    }
+  }
+
+  return fetch(repo.languages_url)
+    .then((res) => res.json())
+    .then((data) => {
+      localStorage.setItem(
+        cacheKey,
+        JSON.stringify({ timestamp: Date.now(), data })
+      );
+      return data;
+    });
 }
 
 /**
@@ -58,12 +90,20 @@ function getLenguajes(repo) {
  * @returns
  */
 async function getPreviewImageUrl(repo) {
-  const headers = {
-    Accept: "application/vnd.github.v3+json",
-  };
+  const cacheKey = `treeCache-${repo.full_name}`;
+  const cache = localStorage.getItem(cacheKey);
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (cache) {
+    const { timestamp, data } = JSON.parse(cache);
+    if (Date.now() - timestamp < oneDay) {
+      return data;
+    }
+  }
+
+  const headers = { Accept: "application/vnd.github.v3+json" };
 
   try {
-    // 1. Obtener info del branch main
     const branchRes = await fetch(
       `https://api.github.com/repos/${repo.owner.login}/${repo.name}/branches/main`,
       { headers }
@@ -71,22 +111,25 @@ async function getPreviewImageUrl(repo) {
     const branchData = await branchRes.json();
     const treeSha = branchData.commit.commit.tree.sha;
 
-    // 2. Obtener el árbol de archivos
     const treeRes = await fetch(
       `https://api.github.com/repos/${repo.owner.login}/${repo.name}/git/trees/${treeSha}?recursive=true`,
       { headers }
     );
     const treeData = await treeRes.json();
 
-    // 3. Buscar preview.png
     const previewFile = treeData.tree.find((file) =>
       file.path.endsWith("preview.png")
     );
 
-    if (!previewFile) return null;
+    const previewUrl = previewFile
+      ? `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/${previewFile.path}`
+      : null;
 
-    // 4. Construir el raw_url
-    return `https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/main/${previewFile.path}`;
+    localStorage.setItem(
+      cacheKey,
+      JSON.stringify({ timestamp: Date.now(), data: previewUrl })
+    );
+    return previewUrl;
   } catch (error) {
     console.error(`Error obteniendo preview.png de ${repo.name}:`, error);
     return null;
