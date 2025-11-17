@@ -648,6 +648,7 @@ main #project .cardProject {
   overflow: hidden;
   color: var(--clr-7);
   z-index: 1;
+  user-select: none;
 }
 
 main #project .cardProject::before {
@@ -657,11 +658,11 @@ main #project .cardProject::before {
   height: 100%;
   top: 0;
   left: 0;
-  background: url("../img/Fondo_Desctop.jpg");
+  background-image: var(--preview-bg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: brightness(0.7);
+  filter: brightness(0.1);
   transition: all 0.5s ease-in-out;
   z-index: -1;
 }
@@ -676,10 +677,26 @@ main #project .cardProject .descritionProject {
   font-size: 0.8em;
   text-align: justify;
   color: var(--clr-7);
+  transition: all 0.5s ease-in-out;
 }
 
-main #project .cardProject .ulSocials {
-  column-gap: 1em;
+main #project .cardProject .ulLenguaje {
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  column-gap: 0.5em;
+  transition: all 0.5s ease-in-out;
+}
+
+main #project .cardProject .ulLenguaje li {
+  padding: 0.2em;
+  border-radius: 0.3em;
+  font-family: var(--fnt-4);
+  color: var(--clr-7);
+  background-color: var(--clr-4);
 }
 
 main #project .cardProject .containerBtnsProject {
@@ -1376,6 +1393,14 @@ footer .copyFooter {
   main #project .cardProject:hover::before {
     filter: brightness(0.9);
     transform: scale(1.2);
+  }
+
+  main #project .cardProject:hover .descritionProject {
+    opacity: 0;
+  }
+
+  main #project .cardProject:hover .ulLenguaje {
+    opacity: 0;
   }
 
   main #project .cardProject .btn-project:nth-child(1):hover {

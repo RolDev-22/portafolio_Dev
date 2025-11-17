@@ -105,11 +105,8 @@ export function renderCard(infoCard) {
   }
 }
 
-/*
 export function renderGitHubRepos(repos) {
   const containerProyect = document.getElementById("contProjects"); //contenedor de los proyectos
-
-  console.log(repos);
 
   repos.forEach((repo) => {
     const article = document.createElement("article"); //crea el elemento article
@@ -121,6 +118,8 @@ export function renderGitHubRepos(repos) {
     const btnCode = document.createElement("a"); //crea el boton codigo
 
     article.classList.add("cardProject", "card");
+    h3.classList.add("titleCardProject");
+    p.classList.add("descritionProject");
     ul.classList.add("ulLenguaje");
     divBtns.classList.add("containerBtnsProject");
     btnVisit.classList.add("btn-class", "btn-project");
@@ -129,17 +128,24 @@ export function renderGitHubRepos(repos) {
     h3.textContent = repo.name;
     p.textContent = repo.description || "No description available.";
 
-    if (repo.languages_url) {
-      repo.languages_url.split(",").forEach((lang) => {
+    //agrega los lenguajes a los li dentro del ul
+    if (repo.languages) {
+      repo.languages.split(",").forEach((lang) => {
         const liLang = document.createElement("li");
         liLang.textContent = lang.trim();
         ul.appendChild(liLang);
       });
     }
 
+    //agrega la imagen de preview o una de fondo por defecto a las tarjetas de proyecto
+    article.style.setProperty(
+      "--preview-bg",
+      `url(${repo.preview || "assets/img/FondoGen.jpg"})`
+    );
+
     btnVisit.textContent = "Visitar";
     btnCode.textContent = "Código";
-    btnVisit.href = repo.html_url;
+    btnVisit.href = repo.homepage;
     btnVisit.target = "_blank";
     btnCode.href = repo.html_url;
     btnCode.target = "_blank";
@@ -153,6 +159,4 @@ export function renderGitHubRepos(repos) {
 
     containerProyect.appendChild(article);
   });
-  
 }
-*/
